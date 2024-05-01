@@ -1,8 +1,8 @@
 ### C++ ###
 # Prerequisites
 *.d
-packages/
 !packages/glad/
+packages/
 
 # Compiled Object files
 *.slo
