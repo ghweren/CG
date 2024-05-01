@@ -2,8 +2,8 @@
 # Prerequisites
 *.d
 packages/*
-!packages/glad
-!models/*
+!packages/glad/
+!models/
 # Compiled Object files
 *.slo
 *.lo
