@@ -1,9 +1,7 @@
 ### C++ ###
 # Prerequisites
 *.d
-!packages/glad/
-packages/
-
+!models/*.obj
 # Compiled Object files
 *.slo
 *.lo
@@ -453,3 +451,5 @@ FodyWeavers.xsd
 
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
+!CG/models/*.obj
+!packages/glad/
