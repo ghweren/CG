@@ -1,9 +1,9 @@
 ### C++ ###
 # Prerequisites
-! /packages/glad/
 ! /models/
 *.d
 /packages/*
+! /packages/glad/
 # Compiled Object files
 *.slo
 *.lo
