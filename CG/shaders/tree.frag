@@ -43,10 +43,10 @@ float getAtten(int i)
 
 vec3 CalcDiffusePlusSpecular(int i, vec3 lightDir)
 {
-    //vec3 norm = texture(texture_normal1, texCoords).rgb;
-    //norm = normalize(norm * 2.0f - 1.0f);
-    //norm = normalize(TBN * norm);
-    vec3 norm = normalize(vertNormal);
+    vec3 norm = texture(texture_normal1, texCoords).rgb;
+    norm = normalize(norm * 2.0f - 1.0f);
+    norm = normalize(TBN * norm);
+    //vec3 norm = normalize(vertNormal);
     float diff_koef = max(dot(norm, lightDir), 0.0);
     vec3 diffuse = light[i].diffuse * diff_koef * vec3(texture(texture_diffuse1, texCoords));
 
@@ -62,6 +62,7 @@ vec3 CalcDiffusePlusSpecular(int i, vec3 lightDir)
 void main()
 {
     vec3 lresult;
+	OutColor = vec4(0.0f,0.0f,0.0f, 0.0f);
     for (int i = 0; i<lights_count; i++)
     {
         if (light[i].type == 1) // Directional Light
